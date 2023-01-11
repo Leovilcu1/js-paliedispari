@@ -9,4 +9,4 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.
 Consigli del giorno
 1. Scriviamo sempre in italiano i passaggi che vogliamo fare
-2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
+2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti. 

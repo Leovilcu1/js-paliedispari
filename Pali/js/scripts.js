@@ -1,9 +1,9 @@
 function parolaPalindroma (parola){
-    console.log(parola);
+    console.log("Parola inserita", parola);
     let parolaInvertita = "";
     for(i = parola.length -1; i >= 0; i--){
 
-        parolaInvertita += parola.charAt(i);
+        parolaInvertita += parola[i];
     }
     console.log(parolaInvertita);
 

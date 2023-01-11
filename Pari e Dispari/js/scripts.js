@@ -1,47 +1,45 @@
 
- 
  let select = document.getElementById("select");
  let newInput = document.getElementById("mio-input");
   let newbutton = document.getElementById("button");
-  let flag;
-  
-    newbutton.addEventListener("click",
+
+  newbutton.addEventListener("click",
     function(){
-        console.log(select.value,typeof select.value)
-        if(newInput.value < 0 || newInput.value >5){
-            alert("non puoi entrare");
+        newInput = parseInt(newInput.value);
+
+        console.log("select.value",select.value, typeof select.value);
+        console.log("newInput.value",newInput,typeof newInput);
+        
+        if( isNaN(newInput) == true ||newInput < 1 || newInput > 5){
+            alert("valore non valido");
         }
         else{
-            console.log(newInput.value , typeof newInput.value, "newInput");
-           
-            
-            let vilcu = numeroRandom(1 ,5) + parseInt(newInput.value);
-            
-            console.log(vilcu,"vilcu");
-            vilcu = PariDispari(vilcu);
-            
+            let somma = newInput + numeroRandom(1, 5);
+            console.log("somma", somma,typeof somma);
+            const verificaNum = PariDispari(somma);
+            console.log( "verificaNum", verificaNum , typeof verificaNum);
+
+            if(select.value == verificaNum){
+                alert("hai vinto");
+            }
+            else{
+                alert("hai perso....")
+            }
         }
-}
-)
+    })
 
-function numeroRandom(min, max){
-    const num = Math.floor(Math.random()*(max + 1 - min))+ min;
-    console.log(num);
-    return num;
-}
-
-function PariDispari (num){
-    if(num % 2 == 0){
-        console.log("numero pari");
-
-
+    function numeroRandom(min, max){
+        const num = Math.floor(Math.random()*(max - min+1)) + min;
+        console.log("num", num , typeof num);
+        return num;
     }
-    else{
-        console.log("numero dispari");
+    function PariDispari(num){
+        if (num % 2 == 0) {
+            return "pari";
+        }
+        else{
+            return "dispari";
 
+        }
     }
-    
-    
-}
-
-
+  
